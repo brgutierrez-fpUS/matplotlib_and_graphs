@@ -70,12 +70,7 @@ def mostrar_evolucion_por_anyo(registros, nombre):
     Donde 'anyos' y 'frecuencias' se extraen del resultado de la función
     'calcular_frecuencia_por_anyo'
     '''
-    anyos_frecuencias = calcular_frecuencia_por_anyo(registros, nombre)
-    anyos = [anyo for anyo, frecuencia in anyos_frecuencias]
-    frecuencias = [frecuencia for anyo, frecuencia in anyos_frecuencias]
-    plt.plot(anyos, frecuencias)
-    plt.title("Evolución del nombre '{}'".format(nombre))
-    plt.show()
+    pass
 
 
 def filtrar_por_genero(registros, genero):
@@ -167,12 +162,4 @@ def mostrar_frecuencias_nombres(registros, limite=10):
         realizar ordenando las claves del diccionario devuelto por 'calcular_frecuencias_por_nombre'
         en función de sus valores asociados.
     '''
-    frecuencias_nombres = calcular_frecuencias_por_nombre(registros)
-    nombres = sorted(frecuencias_nombres,
-                      key=frecuencias_nombres.get, reverse=True)[:limite]
-    frecuencias = [frecuencias_nombres[nombre] for nombre in nombres]
-
-    plt.bar(nombres, frecuencias)
-    plt.xticks(rotation=80)
-    plt.title("Frecuencia de los {} nombres más comunes".format(limite))
-    plt.show()
+    pass

@@ -133,11 +133,7 @@ def mostrar_distribucion_etiquetas(preguntas, etiquetas):
     Donde 'tamanyos' es una lista, alineada con la lista de etiquetas, con el número de preguntas para
     cada etiqueta.  
     '''
-    frecuencias = contar_etiquetas(preguntas)
-    tamanyos = [frecuencias.get(e, 0) for e in etiquetas]
-    plt.pie(tamanyos, labels=etiquetas, autopct='%1.1f%%', shadow=True, startangle=90)
-    plt.legend()
-    plt.show()
+    pass
 
 
 def mostrar_evolucion_etiquetas(preguntas, etiquetas):
@@ -164,19 +160,5 @@ def mostrar_evolucion_etiquetas(preguntas, etiquetas):
                       Cada evolución consiste en una lista de frecuencias, alineada con la lista de anyos, 
                       correspondientes con el número de veces que la etiqueta ha sido usada cada anyo.   
     '''
-    anyos = sorted({p.anyo for p in preguntas})
-    preguntas_por_anyo = agrupar_preguntas_por_anyo(preguntas)
-    evoluciones = []
-    for etiqueta in etiquetas:
-        evolucion = []
-        for anyo in anyos:
-            frecuencia = len([p for p in preguntas_por_anyo[anyo] if p.etiqueta == etiqueta])
-            evolucion.append(frecuencia)
-        evoluciones.append(evolucion)
-    
-    for etiqueta, evolucion in zip(etiquetas, evoluciones):
-        plt.plot(evolucion, label=etiqueta)
-    plt.xticks(range(len(anyos)), anyos, rotation=80, fontsize=10)
-    plt.legend()
-    plt.show()
+    pass
     

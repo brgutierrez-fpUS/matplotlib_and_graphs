@@ -75,16 +75,7 @@ def muestra_evolucion_poblacion(poblaciones, pais):
         plt.plot(l_anyos,l_habitantes)
         plt.show()
     '''
-    # Calculamos la lista de con los datos de población del pais dado 
-    poblaciones_filtradas = filtra_por_pais(poblaciones, pais)
-    
-    l_habitantes = [num_habitantes for _, num_habitantes in poblaciones_filtradas]
-    l_anyos = [anyo for anyo, _ in poblaciones_filtradas]
-    # Componemos y visualizamos la gráfica
-    titulo = 'Evolución de la poblacion de ' + pais
-    plt.title(titulo)
-    plt.plot(l_anyos, l_habitantes)
-    plt.show()
+    pass
 
 
 def filtra_por_paises_y_anyo(poblaciones, anyo, paises):
@@ -138,16 +129,4 @@ def muestra_comparativa_paises_anyo(poblaciones, anyo, paises):
         plt.xticks(indice, l_paises, fontsize=8)
         plt.show()
     '''
-    # Calculamos la lista de poblaciones del año dado para los paises de la lista
-    poblaciones_filtradas = filtra_por_paises_y_anyo(poblaciones, anyo, paises)
-    
-    l_habitantes = [num_habitantes for _, num_habitantes in poblaciones_filtradas]
-    l_paises = [nombre_pais for nombre_pais, _ in poblaciones_filtradas]
-  
-    titulo = 'Población en el año ' + str(anyo)
-    plt.title(titulo)
-    indice = range(len(l_paises))
-    plt.bar(indice, l_habitantes)
-    plt.xticks(indice, l_paises, fontsize=8)
-
-    plt.show()
+    pass
